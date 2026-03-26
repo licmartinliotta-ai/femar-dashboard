@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<!-- saved from url=(0041)file:///Users/mgl/Downloads/index_13.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Femar Insurance · Intelligence Dashboard</title>
+<link href="./index_files/css2" rel="stylesheet">
+<style>
+:root{--bg:#f7f5f0;--s:#fff;--s2:#f0ede6;--bd:rgba(0,0,0,.08);--t:#1a1a18;--t2:#5a5a54;--t3:#9a9a90;--gn:#2d6a2d;--gl:#eaf3e0;--gm:#4a9e4a;--rl:#faeaea;--rm:#d44;--al:#fef3e0;--am:#d4840a;--bl:#e8f0fb;--bm:#2563a8;--pl:#f0eafa;--pm:#7c3aed;--ac:#c8a84b}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);font-family:'Syne',sans-serif;font-size:13px;color:var(--t)}
+nav{position:sticky;top:0;z-index:100;background:var(--t);display:flex;align-items:center;padding:0 24px;height:52px;border-bottom:2px solid var(--ac);gap:16px}
+.nb{display:flex;align-items:center;gap:10px;flex:1}.nd{width:7px;height:7px;background:var(--ac);border-radius:50%;flex-shrink:0;animation:bl 2.5s ease-in-out infinite}
+@keyframes bl{0%,100%{opacity:1}50%{opacity:.25}}
+.nt{font-family:'Lora',serif;font-size:14px;color:#fff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.ntabs{display:flex;gap:4px;flex-shrink:0}
+.tb{font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:6px 16px;border-radius:4px;cursor:pointer;transition:all .2s;color:rgba(255,255,255,.45);border:1px solid transparent;background:none;white-space:nowrap}
+.tb:hover{color:rgba(255,255,255,.8)}.tb.active{color:var(--ac);border-color:rgba(200,168,75,.5);background:rgba(200,168,75,.1)}
+.nm{font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,.3);white-space:nowrap;flex-shrink:0}
+.pg{display:none;padding:24px;max-width:1360px;margin:0 auto}.pg.active{display:block}
+.ey{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--t3);margin-bottom:3px}
+.tit{font-family:'Lora',serif;font-size:26px;font-weight:500;margin-bottom:2px}.tit em{font-style:italic;color:var(--ac)}
+.sub{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--t3);margin-bottom:18px}
+.dv{display:flex;align-items:center;gap:12px;margin:22px 0 14px}.dl{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--t3);white-space:nowrap}.dr{flex:1;height:1px;background:var(--bd)}
+.kg{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin-bottom:20px}
+.kc{background:var(--s);border:1px solid var(--bd);border-radius:8px;padding:14px 16px}
+.kc.ag{border-top:3px solid var(--gm)}.kc.ab{border-top:3px solid var(--bm)}.kc.aa{border-top:3px solid var(--am)}.kc.ar{border-top:3px solid var(--rm)}.kc.ap{border-top:3px solid var(--pm)}
+.kl{font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--t3);margin-bottom:5px}
+.kv{font-size:20px;font-weight:700;line-height:1}.kv.g{color:var(--gn)}.kv.b{color:var(--bm)}.kv.a{color:var(--am)}.kv.r{color:var(--rm)}.kv.p{color:var(--pm)}
+.ks{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--t3);margin-top:3px}
+.cg2{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px;margin-bottom:14px}
+.cg3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;margin-bottom:14px}
+.cc{background:var(--s);border:1px solid var(--bd);border-radius:8px;padding:16px}
+.ct{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--t2);margin-bottom:3px}
+.cs{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--t3);margin-bottom:10px}
+.cw{position:relative;height:190px;width:100%}.cw.tall{height:245px}
+.lg{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:7px}.li{display:flex;align-items:center;gap:4px;font-size:10px;color:var(--t2)}
+.ld{width:9px;height:9px;border-radius:2px;flex-shrink:0}
+.tc{background:var(--s);border:1px solid var(--bd);border-radius:8px;overflow:hidden;margin-bottom:16px}
+.th{padding:10px 16px;border-bottom:1px solid var(--bd);font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--t2)}
+.ts{overflow-x:auto}
+table{width:100%;border-collapse:collapse;font-size:11px}
+thead th{padding:8px 12px;text-align:right;font-size:9px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--t3);background:var(--s2);border-bottom:1px solid var(--bd);white-space:nowrap;font-family:'JetBrains Mono',monospace}
+thead th:first-child{text-align:left}
+tbody tr{border-bottom:1px solid var(--bd);transition:background .1s}tbody tr:hover{background:var(--s2)}tbody tr:last-child{border-bottom:none}
+tbody td{padding:9px 12px;text-align:right;color:var(--t2);font-family:'JetBrains Mono',monospace;font-size:10px;white-space:nowrap}
+tbody td:first-child{text-align:left;font-family:'Syne',sans-serif;font-weight:600;font-size:12px;color:var(--t)}
+.tg{color:var(--gn)!important;font-weight:700!important}.tr2{color:var(--rm)!important;font-weight:700!important}.ta2{color:var(--am)!important;font-weight:700!important}
+.sep td{background:var(--s2)!important;font-size:9px!important;color:var(--t3)!important;font-family:'JetBrains Mono',monospace!important;text-transform:uppercase;text-align:left!important;padding:6px 12px!important;font-weight:700!important}
+.bc{display:inline-flex;align-items:center;gap:4px;background:var(--rl);color:#8b2020;border:1px solid rgba(212,68,68,.2);border-radius:4px;padding:2px 8px;font-size:9px;font-family:'JetBrains Mono',monospace}
+.bproj{display:inline-block;font-size:8px;font-family:'JetBrains Mono',monospace;padding:1px 5px;border-radius:3px;background:var(--bl);color:var(--bm);margin-left:4px;vertical-align:middle}
+.rrow td{color:var(--t3)!important}.rrow td:first-child{color:var(--t2)!important}
+.tl{display:flex;flex-wrap:wrap;background:var(--s);border:1px solid var(--bd);border-radius:8px;overflow:hidden;margin-bottom:20px}
+.tli{flex:1;min-width:155px;padding:14px 16px;border-right:1px solid var(--bd);position:relative}.tli:last-child{border-right:none}
+.tli-d{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--t3);margin-bottom:3px;letter-spacing:.1em;text-transform:uppercase}
+.tli-e{font-size:11px;font-weight:600;color:var(--t);margin-bottom:6px}
+.tli-c{font-family:'JetBrains Mono',monospace;font-size:17px;font-weight:700;margin-bottom:5px}
+.tli-p{display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:3px;margin-bottom:5px}
+.tli-roi{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--t2);margin-top:3px}.tli-roiv{font-weight:700}
+.tl-arr{position:absolute;right:-10px;top:50%;transform:translateY(-50%);font-size:18px;color:var(--t3);background:var(--s);z-index:2;line-height:1;padding:2px 0}
+.p125{background:#fff8e6;color:#7a5c00;border:1px solid #e6c84a}.p18{background:var(--gl);color:var(--gn);border:1px solid #a0d0a0}.p2117{background:var(--bl);color:var(--bm);border:1px solid #90c0e8}
+.rg{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-bottom:20px}
+.rc{background:var(--s);border:1px solid var(--bd);border-radius:8px;padding:16px;position:relative;overflow:hidden}
+.rc::before{content:'';position:absolute;top:0;left:0;right:0;height:4px}
+.rc.t1::before{background:#b8860b}.rc.t2::before{background:var(--gm)}.rc.t3::before{background:var(--bm)}
+.rc-p{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--t3);letter-spacing:.1em;text-transform:uppercase;margin-bottom:5px}
+.rc-t{font-size:12px;font-weight:700;margin-bottom:10px}
+.rc-r{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px;font-size:11px}
+.rc-rl{color:var(--t2)}.rc-rv{font-family:'JetBrains Mono',monospace;font-weight:600}
+.rc-b{font-family:'JetBrains Mono',monospace;font-size:24px;font-weight:700;margin:8px 0 3px}
+.rc-a{font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--t2)}.rc-n{font-size:10px;color:var(--t3);margin-top:6px;font-family:'JetBrains Mono',monospace}
+.ig{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin-bottom:16px}
+.ic{background:var(--s);border:1px solid var(--bd);border-radius:8px;padding:16px}
+.itag{display:inline-block;font-size:9px;font-family:'JetBrains Mono',monospace;padding:2px 8px;border-radius:3px;margin-bottom:8px;font-weight:600}
+.tok{background:var(--gl);color:var(--gn)}.tww{background:var(--al);color:var(--am)}.ti{background:var(--bl);color:var(--bm)}.tpp{background:var(--pl);color:var(--pm)}
+.inum{font-size:20px;font-weight:700;margin-bottom:4px}.itit{font-size:12px;font-weight:700;margin-bottom:5px}.idsc{font-size:11px;color:var(--t2);line-height:1.6}
+.asb{background:var(--s2);border:1px solid var(--bd);border-radius:6px;padding:12px 18px;font-size:10px;color:var(--t2);line-height:2;font-family:'JetBrains Mono',monospace;margin-bottom:18px}.asb strong{color:var(--t);font-weight:600}
+.recg{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:16px}
+.rec{background:var(--s);border:1px solid var(--bd);border-radius:8px;padding:16px;border-left:4px solid transparent}
+.rec.pendiente{border-left-color:#9a9a90}.rec.confirmada{border-left-color:var(--gm)}.rec.seguimiento{border-left-color:var(--am)}
+.rec-h{display:flex;align-items:flex-start;justify-content:space-between;gap:8px;margin-bottom:8px}
+.rec-b{font-size:9px;font-family:'JetBrains Mono',monospace;padding:2px 7px;border-radius:3px;font-weight:600;white-space:nowrap;flex-shrink:0}
+.rec-b.pendiente{background:var(--s2);color:var(--t3)}.rec-b.confirmada{background:var(--gl);color:var(--gn)}.rec-b.seguimiento{background:var(--al);color:var(--am)}
+.rec-t{font-size:12px;font-weight:700;line-height:1.3}.rec-c{font-size:11px;color:var(--t3);margin-bottom:6px;font-family:'JetBrains Mono',monospace;line-height:1.5}
+.rec-a{font-size:11px;color:var(--t2);line-height:1.55;padding-top:6px;border-top:1px solid var(--bd)}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nb"><div class="nd"></div><span class="nt">Femar Insurance · Intelligence Dashboard</span></div>
+  <div class="ntabs">
+    <button class="tb active" onclick="showTab(&#39;femar&#39;,this)">① Femar</button>
+    <button class="tb" onclick="showTab(&#39;gloup&#39;,this)">② Gloup</button>
+    <button class="tb" onclick="showTab(&#39;proj&#39;,this)">③ Proyección</button>
+  </div>
+  <div class="nm" id="nmeta">Actualizado: 2026-03-25 · Último mes: Feb 2026</div>
+</nav>
+
+<div id="page-femar" class="pg active">
+  <div class="ey">Femar Insurance LLC · Agent 059275 · Hallandale Beach FL</div>
+  <div class="tit">Operaciones del <em>negocio</em></div>
+  <div class="sub">Mar 2024 – Feb 2026 · 24 meses · Reportes Federico Volinsky + Business Metrics Allstate</div>
+  <div class="dv"><div class="dr"></div><span class="dl">KPIs operativos</span><div class="dr"></div></div>
+  <div class="kg" id="f-kpis"><div class="kc ab"><div class="kl">Avg items/mes</div><div class="kv b">28.5</div><div class="ks">meta: 40</div></div><div class="kc ag"><div class="kl">Mejor mes</div><div class="kv g">83 items</div><div class="ks">Oct 2025</div></div><div class="kc ab"><div class="kl">Avg revenue/mes</div><div class="kv b">$24k</div><div class="ks">24 meses</div></div><div class="kc ab"><div class="kl">Revenue acumulado</div><div class="kv b">$588K</div><div class="ks">total</div></div><div class="kc ag"><div class="kl">Avg exp. ratio</div><div class="kv g">42.7%</div><div class="ks">costos fijos/rev</div></div><div class="kc aa"><div class="kl">Avg costo/item</div><div class="kv a">$204</div><div class="ks">lead cost÷items</div></div></div>
+  <div class="dv"><div class="dr"></div><span class="dl">Producción mensual</span><div class="dr"></div></div>
+  <div class="cg2">
+    <div class="cc"><div class="ct">Items Allstate vendidos por mes</div><div class="cs">Verde ≥40 (meta) · Azul &lt;40 · Línea roja = target</div>
+      <div class="lg"><div class="li"><div class="ld" style="background:#2d6a2d;opacity:.7"></div>≥40</div><div class="li"><div class="ld" style="background:#2563a8;opacity:.6"></div>&lt;40</div><div class="li"><div class="ld" style="background:#d44;opacity:.7"></div>Meta 40</div></div>
+      <div class="cw"><canvas id="f-c1" width="615" height="190" style="display: block; box-sizing: border-box; height: 190px; width: 615px;"></canvas></div></div>
+    <div class="cc"><div class="ct">Revenue vs. Expenses con leads</div><div class="cs">Cruce = margen comprimido</div>
+      <div class="lg"><div class="li"><div class="ld" style="background:#2563a8"></div>Revenue</div><div class="li"><div class="ld" style="background:#d44"></div>Exp. con leads</div></div>
+      <div class="cw"><canvas id="f-c2" width="615" height="190" style="display: block; box-sizing: border-box; height: 190px; width: 615px;"></canvas></div></div>
+  </div>
+  <div class="cg3">
+    <div class="cc"><div class="ct">Costo adquisición / item</div><div class="cs">Lead cost ÷ items vendidos</div><div class="cw"><canvas id="f-c3" width="394" height="190" style="display: block; box-sizing: border-box; height: 190px; width: 394px;"></canvas></div></div>
+    <div class="cc"><div class="ct">Expense ratio — costos fijos / revenue</div><div class="cs">Puntos rojos = meses sobre 60%</div><div class="cw"><canvas id="f-c4" width="394" height="190" style="display: block; box-sizing: border-box; height: 190px; width: 394px;"></canvas></div></div>
+    <div class="cc"><div class="ct">Lead cost % del revenue</div><div class="cs">Cuánto del ingreso va en adquisición</div><div class="cw"><canvas id="f-c5" width="394" height="190" style="display: block; box-sizing: border-box; height: 190px; width: 394px;"></canvas></div></div>
+  </div>
+  <div class="dv"><div class="dr"></div><span class="dl">Business Metrics Allstate — Sep–Dic 2025</span><div class="dr"></div></div>
+  <div class="kg">
+    <div class="kc ab"><div class="kl">Items en Force</div><div class="kv b">2,167</div><div class="ks">Personal Lines · Dic 2025</div></div>
+    <div class="kc ab"><div class="kl">Policies in Force</div><div class="kv b">1,372</div><div class="ks">+225 Flood/Motor/Ivantage</div></div>
+    <div class="kc ag"><div class="kl">Policy Retention</div><div class="kv g">81.94%</div><div class="ks">vs 72.84% año ant · +9.1pp</div></div>
+    <div class="kc ab"><div class="kl">Premium Escrito 12MM</div><div class="kv">$3.28M</div><div class="ks">Written &amp; Advanced</div></div>
+    <div class="kc ag"><div class="kl">Loss Ratio 12MM</div><div class="kv g">42.99%</div><div class="ks">Std Auto · saludable</div></div>
+    <div class="kc aa"><div class="kl">Gap vs PYE</div><div class="kv a">−187</div><div class="ks">vs −286 Sep · recuperando</div></div>
+  </div>
+  <div class="cg2">
+    <div class="cc"><div class="ct">Policies in Force vs PYE</div><div class="cs">Fuente: Allstate oficial</div>
+      <div class="lg"><div class="li"><div class="ld" style="background:#2563a8"></div>PIF</div><div class="li"><div class="ld" style="background:#d44"></div>PYE</div></div>
+      <div class="cw"><canvas id="f-c6" width="615" height="190" style="display: block; box-sizing: border-box; height: 190px; width: 615px;"></canvas></div></div>
+    <div class="cc"><div class="ct">Policy Retention % — actual vs año anterior</div><div class="cs">Mejora sostenida +8–9pp</div>
+      <div class="lg"><div class="li"><div class="ld" style="background:#1D9E75"></div>Actual</div><div class="li"><div class="ld" style="background:#b4b2a9"></div>Año ant.</div></div>
+      <div class="cw"><canvas id="f-c7" width="615" height="190" style="display: block; box-sizing: border-box; height: 190px; width: 615px;"></canvas></div></div>
+  </div>
+  <div class="cg2">
+    <div class="cc"><div class="ct">New Items — Standard Auto + Otras líneas</div><div class="cs">Aceleración Q4: 130→205→249→308</div>
+      <div class="lg"><div class="li"><div class="ld" style="background:#2d6a2d"></div>Std Auto</div><div class="li"><div class="ld" style="background:#d4840a"></div>Otras</div></div>
+      <div class="cw"><canvas id="f-c8" width="615" height="190" style="display: block; box-sizing: border-box; height: 190px; width: 615px;"></canvas></div></div>
+    <div class="cc"><div class="ct">Written Premium — New vs Renewal</div><div class="cs">Renewal = 84% del premium total</div>
+      <div class="lg"><div class="li"><div class="ld" style="background:#7c3aed"></div>New</div><div class="li"><div class="ld" style="background:#2563a8"></div>Renewal</div></div>
+      <div class="cw"><canvas id="f-c9" width="615" height="190" style="display: block; box-sizing: border-box; height: 190px; width: 615px;"></canvas></div></div>
+  </div>
+  <div class="dv"><div class="dr"></div><span class="dl">Detalle mensual completo</span><div class="dr"></div></div>
+  <div class="tc"><div class="th">24 meses · Mar 2024 – Feb 2026</div>
+    <div class="ts"><table><thead><tr><th>Mes</th><th>Items</th><th>Revenue</th><th>Exp c/leads</th><th>Lead Cost</th><th>Lead%</th><th>Total Profit</th><th>Exp Ratio</th></tr></thead><tbody id="f-tb"><tr><td>Mar 2024</td><td class="">20</td><td>$30,073</td><td>$20,258</td><td>$3,295</td><td class="">11.0%</td><td class="">$9,815</td><td class="">53.8%</td></tr><tr><td>Abr 2024</td><td class="tg">48</td><td>$28,201</td><td>$20,204</td><td>$3,126</td><td class="">11.1%</td><td class="">$7,998</td><td class="tr2">60.6%</td></tr><tr><td>May 2024</td><td class="tg">43</td><td>$31,331</td><td>$20,561</td><td>$2,688</td><td class="">8.6%</td><td class="tg">$10,770</td><td class="">56.2%</td></tr><tr><td>Jun 2024</td><td class="">22</td><td>$26,321</td><td>$17,056</td><td>$2,904</td><td class="">11.0%</td><td class="">$9,265</td><td class="">53.8%</td></tr><tr><td>Jul 2024</td><td class="">24</td><td>$25,040</td><td>$17,250</td><td>$2,868</td><td class="">11.5%</td><td class="">$7,789</td><td class="">57.4%</td></tr><tr><td>Ago 2024</td><td class="">14</td><td>$28,277</td><td>$16,393</td><td>$2,620</td><td class="">9.3%</td><td class="tg">$11,884</td><td class="">48.7%</td></tr><tr><td>Sep 2024</td><td class="">20</td><td>$26,264</td><td>$13,074</td><td>$2,153</td><td class="">8.2%</td><td class="tg">$13,191</td><td class="">41.6%</td></tr><tr><td>Oct 2024</td><td class="">14</td><td>$21,810</td><td>$11,292</td><td>$2,245</td><td class="">10.3%</td><td class="tg">$10,518</td><td class="">41.5%</td></tr><tr><td>Nov 2024</td><td class="">11</td><td>$25,278</td><td>$9,726</td><td>$1,349</td><td class="">5.3%</td><td class="tg">$15,552</td><td class="tg">33.1%</td></tr><tr><td>Dic 2024</td><td class="">8</td><td>$20,588</td><td>$8,375</td><td>$2,302</td><td class="">11.2%</td><td class="tg">$12,212</td><td class="tg">29.5%</td></tr><tr><td>Ene 2025</td><td class="">24</td><td>$21,284</td><td>$10,500</td><td>$2,325</td><td class="">10.9%</td><td class="tg">$10,783</td><td class="">38.4%</td></tr><tr><td>Feb 2025</td><td class="">19</td><td>$25,363</td><td>$9,788</td><td>$2,823</td><td class="">11.1%</td><td class="tg">$15,574</td><td class="tg">27.5%</td></tr><tr><td>Mar 2025</td><td class="">22</td><td>$25,167</td><td>$8,817</td><td>$2,010</td><td class="">8.0%</td><td class="tg">$16,351</td><td class="tg">27.0%</td></tr><tr><td>Abr 2025</td><td class="">18</td><td>$22,776</td><td>$8,726</td><td>$2,103</td><td class="">9.2%</td><td class="tg">$14,051</td><td class="tg">29.1%</td></tr><tr><td>May 2025</td><td class="">8</td><td>$21,486</td><td>$9,126</td><td>$2,343</td><td class="">10.9%</td><td class="tg">$12,360</td><td class="tg">31.6%</td></tr><tr><td>Jun 2025</td><td class="">6</td><td>$19,664</td><td>$11,328</td><td>$4,897</td><td class="">24.9%</td><td class="">$8,335</td><td class="tg">32.7%</td></tr><tr><td>Jul 2025</td><td class="">10</td><td>$19,430</td><td>$13,692</td><td>$7,533</td><td class="">38.8%</td><td class="">$5,738</td><td class="tg">31.7%</td></tr><tr><td>Ago 2025</td><td class="">23</td><td>$18,187</td><td>$9,096</td><td>$2,794</td><td class="">15.4%</td><td class="">$9,092</td><td class="tg">34.7%</td></tr><tr><td>Sep 2025</td><td class="tg">46</td><td>$19,472</td><td>$16,089</td><td>$6,533</td><td class="">33.5%</td><td class="">$3,383</td><td class="">49.1%</td></tr><tr><td>Oct 2025</td><td class="tg">83</td><td>$24,598</td><td>$23,803</td><td>$11,587</td><td class="ta2">47.1%</td><td class="tr2">$795</td><td class="">49.7%</td></tr><tr><td>Nov 2025</td><td class="tg">48</td><td>$33,947</td><td>$25,951</td><td>$12,016</td><td class="">35.4%</td><td class="">$7,996</td><td class="">41.1%</td></tr><tr><td>Dic 2025</td><td class="tg">62</td><td>$22,066</td><td>$20,739</td><td>$8,134</td><td class="">36.9%</td><td class="tr2">$1,328</td><td class="">57.1%</td></tr><tr><td>Ene 2026</td><td class="tg">55</td><td>$27,854</td><td>$23,910</td><td>$10,606</td><td class="">38.1%</td><td class="">$3,944</td><td class="">47.8%</td></tr><tr><td>Feb 2026</td><td class="">36</td><td>$23,160</td><td>$18,882</td><td>$7,273</td><td class="">31.4%</td><td class="">$4,279</td><td class="">50.1%</td></tr></tbody></table></div></div>
+</div>
+
+<div id="page-gloup" class="pg">
+  <div class="ey">Gloup Capital · participación en Femar Insurance LLC · equity en 3 tramos</div>
+  <div class="tit">Retorno de la <em>inversión</em></div>
+  <div class="sub">Mar 2024 – Feb 2026 · 24 meses · ROI calculado sobre capital invertido por período</div>
+  <div class="dv"><div class="dr"></div><span class="dl">Historia de la inversión</span><div class="dr"></div></div>
+  <div class="tl" id="g-tl"></div>
+  <div class="dv"><div class="dr"></div><span class="dl">ROI por período</span><div class="dr"></div></div>
+  <div class="rg" id="g-rc"></div>
+  <div class="dv"><div class="dr"></div><span class="dl">KPIs globales</span><div class="dr"></div></div>
+  <div class="kg" id="g-kpis"></div>
+  <div class="dv"><div class="dr"></div><span class="dl">Evolución del profit</span><div class="dr"></div></div>
+  <div class="cg2">
+    <div class="cc"><div class="ct">Gloup Profit mensual — apilado con commitments</div><div class="cs">Color = tramo · Rojo = gap hasta commitment</div>
+      <div class="lg"><div class="li"><div class="ld" style="background:#b8860b;opacity:.7"></div>12.5%</div><div class="li"><div class="ld" style="background:#2d6a2d;opacity:.65"></div>18%</div><div class="li"><div class="ld" style="background:#2563a8;opacity:.65"></div>21.17%</div><div class="li"><div class="ld" style="background:#d44;opacity:.65"></div>Gap</div></div>
+      <div class="cw tall"><canvas id="g-c1"></canvas></div></div>
+    <div class="cc"><div class="ct">ROI acumulado por tramo</div><div class="cs">Profit acumulado ÷ capital del tramo</div>
+      <div class="lg"><div class="li"><div class="ld" style="background:#b8860b"></div>T1 $120K</div><div class="li"><div class="ld" style="background:#2d6a2d"></div>T2 $165–170K</div><div class="li"><div class="ld" style="background:#2563a8"></div>T3 $200K</div></div>
+      <div class="cw tall"><canvas id="g-c2"></canvas></div></div>
+  </div>
+  <div class="cg2">
+    <div class="cc"><div class="ct">Gloup acumulado vs. inversión $200K</div><div class="cs">El ROI es el flujo mensual perpetuo</div>
+      <div class="lg"><div class="li"><div class="ld" style="background:#2563a8"></div>Acumulado</div><div class="li"><div class="ld" style="background:#d44"></div>$200K</div></div>
+      <div class="cw"><canvas id="g-c3"></canvas></div></div>
+    <div class="cc"><div class="ct">Total Profit Femar vs. Gloup Profit</div><div class="cs">Color Gloup = tramo activo</div>
+      <div class="lg"><div class="li"><div class="ld" style="background:#d4840a;opacity:.5"></div>Total Profit</div><div class="li"><div class="ld" style="background:#2d6a2d;opacity:.6"></div>Gloup</div></div>
+      <div class="cw"><canvas id="g-c4"></canvas></div></div>
+  </div>
+  <div class="dv"><div class="dr"></div><span class="dl">Detalle mensual — 24 meses</span><div class="dr"></div></div>
+  <div class="tc"><div class="th">Dividido por tramo · Δ = real vs contractual esperado</div>
+    <div class="ts"><table><thead><tr><th>Mes</th><th>Revenue</th><th>Total Profit</th><th>Capital</th><th>Tramo</th><th>Gloup Profit</th><th>ROI mensual</th><th>Commitment</th><th>Δ vs esperado</th></tr></thead><tbody id="g-tb"></tbody></table></div></div>
+  <div class="dv"><div class="dr"></div><span class="dl">Análisis</span><div class="dr"></div></div>
+  <div class="ig" id="g-ins"></div>
+</div>
+
+<div id="page-proj" class="pg">
+  <div class="ey">Modelo de vencimientos y renewals — datos oficiales Allstate</div>
+  <div class="tit">Proyección <em>Mar–Ago 2026</em></div>
+  <div class="sub">Ciclo 6 meses · Retención 81.94% · Pro Status 8% · Gloup 21.17%</div>
+  <div class="asb"><strong>Supuestos:</strong> Retención <strong>81.94%</strong> · Premium <strong>$148/item/mes</strong> · Comisión renewal <strong>8%</strong> (Pro Status) · Gloup share <strong>21.17%</strong> del profit neto ($200K invertidos) · New items ~<strong>271/mes</strong></div>
+  <div class="dv"><div class="dr"></div><span class="dl">KPIs</span><div class="dr"></div></div>
+  <div class="kg" id="p-kpis"></div>
+  <div class="dv"><div class="dr"></div><span class="dl">Vencimientos y renewals</span><div class="dr"></div></div>
+  <div class="cg2">
+    <div class="cc"><div class="ct">Items que vencen vs. renuevan</div><div class="cs">Origen: new items de 6 meses atrás</div>
+      <div class="lg"><div class="li"><div class="ld" style="background:#d44"></div>Vencen</div><div class="li"><div class="ld" style="background:#1D9E75"></div>Renuevan</div></div>
+      <div class="cw"><canvas id="p-c1"></canvas></div></div>
+    <div class="cc"><div class="ct">Comisión renewal — Pro Status 8%</div><div class="cs">Solo renewals · pico en Jun 2026</div>
+      <div class="lg"><div class="li"><div class="ld" style="background:#7c3aed"></div>Comisión</div></div>
+      <div class="cw"><canvas id="p-c2"></canvas></div></div>
+  </div>
+  <div class="cg2">
+    <div class="cc"><div class="ct">Items en force — histórico + proyectado vs PYE</div><div class="cs">Punteada = proyectado · Roja = PYE 2,362</div>
+      <div class="lg"><div class="li"><div class="ld" style="background:#2563a8"></div>Histórico</div><div class="li"><div class="ld" style="background:#7c3aed"></div>Proyectado</div><div class="li"><div class="ld" style="background:#d44"></div>PYE</div></div>
+      <div class="cw"><canvas id="p-c3"></canvas></div></div>
+    <div class="cc"><div class="ct">Gloup revenue proyectado — 21.17%</div><div class="cs">Sobre profit renewals · $200K invertidos</div>
+      <div class="lg"><div class="li"><div class="ld" style="background:#2d6a2d"></div>Gloup 21.17%</div></div>
+      <div class="cw"><canvas id="p-c4"></canvas></div></div>
+  </div>
+  <div class="dv"><div class="dr"></div><span class="dl">Detalle mes a mes</span><div class="dr"></div></div>
+  <div class="tc"><div class="th">Mar–Ago 2026 · modelo 6M lag · retención 81.94%</div>
+    <div class="ts"><table><thead><tr><th>Mes</th><th>New items</th><th>Vencen</th><th>Renuevan</th><th>Churn</th><th>Prem. renewal 6M</th><th>Comisión 8%</th><th>Gloup 21.17%</th><th>Origen</th></tr></thead><tbody id="p-tb"></tbody></table></div></div>
+  <div class="dv"><div class="dr"></div><span class="dl">Insights</span><div class="dr"></div></div>
+  <div class="ig" id="p-ins"></div>
+  <div class="dv"><div class="dr"></div><span class="dl">Recomendaciones</span><div class="dr"></div></div>
+  <div class="recg" id="p-recs"></div>
+</div>
+
+<!-- Chart.js AL FINAL DEL BODY — se carga antes de los scripts -->
+<script src="./index_files/chart.umd.min.js"></script>
+
+<script>
+// ─────────────────────────────────────────────────────────────
+// NAVEGACIÓN — GLOBAL, FUERA DE CUALQUIER ONLOAD
+// Los botones del nav llaman a showTab directamente.
+// ─────────────────────────────────────────────────────────────
+var _done = {};
+function showTab(id, btn) {
+  document.querySelectorAll('.pg').forEach(function(p){ p.classList.remove('active'); });
+  document.querySelectorAll('.tb').forEach(function(b){ b.classList.remove('active'); });
+  document.getElementById('page-' + id).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo(0, 52);
+  if (!_done[id]) {
+    _done[id] = true;
+    if (id === 'gloup') setTimeout(initGloup, 50);
+    if (id === 'proj')  setTimeout(initProj,  50);
+  }
+}
+</script>
+
+<script>
+// ─────────────────────────────────────────────────────────────
+// DATOS
+// ─────────────────────────────────────────────────────────────
+var META={ultima_actualizacion:"2026-03-25",ultimo_mes_cargado:"Feb 2026",version:"1.0"};
+var FD=[
+  {m:"Mar 2024",i:20, r:30072.82,xe:16173.31,xw:20258.31,lc:3295,   p:9814.51},
+  {m:"Abr 2024",i:48, r:28201.33,xe:17077.69,xw:20203.69,lc:3126,   p:7997.64},
+  {m:"May 2024",i:43, r:31331.16,xe:17619.79,xw:20560.95,lc:2688,   p:10770.21},
+  {m:"Jun 2024",i:22, r:26320.51,xe:14152.19,xw:17056.19,lc:2904,   p:9265.32},
+  {m:"Jul 2024",i:24, r:25039.55,xe:14382.22,xw:17250.22,lc:2868,   p:7789.33},
+  {m:"Ago 2024",i:14, r:28277.25,xe:13773.43,xw:16393.33,lc:2619.9, p:11883.92},
+  {m:"Sep 2024",i:20, r:26264.36,xe:10921.34,xw:13073.84,lc:2152.5, p:13190.52},
+  {m:"Oct 2024",i:14, r:21810.15,xe:9047.66, xw:11292.41,lc:2244.75,p:10517.74},
+  {m:"Nov 2024",i:11, r:25278.09,xe:8377.14, xw:9726.34, lc:1349.2, p:15551.75},
+  {m:"Dic 2024",i:8,  r:20587.59,xe:6073.68, xw:8375.18, lc:2301.5, p:12212.41},
+  {m:"Ene 2025",i:24, r:21283.64,xe:8175.47, xw:10500.17,lc:2324.7, p:10783.47},
+  {m:"Feb 2025",i:19, r:25362.71,xe:6965.98, xw:9788.48, lc:2822.5, p:15574.23},
+  {m:"Mar 2025",i:22, r:25167.48,xe:6807.27, xw:8816.97, lc:2009.7, p:16350.51},
+  {m:"Abr 2025",i:18, r:22776.31,xe:6622.27, xw:8725.57, lc:2103.3, p:14050.74},
+  {m:"May 2025",i:8,  r:21485.78,xe:6782.39, xw:9125.54, lc:2343.15,p:12360.24},
+  {m:"Jun 2025",i:6,  r:19663.63,xe:6431.93, xw:11328.48,lc:4896.55,p:8335.15},
+  {m:"Jul 2025",i:10, r:19429.73,xe:6159.23, xw:13691.93,lc:7532.7, p:5737.80},
+  {m:"Ago 2025",i:23, r:18187.26,xe:6301.93, xw:9095.73, lc:2793.8, p:9091.53},
+  {m:"Sep 2025",i:46, r:19472.12,xe:9556.78, xw:16089.28,lc:6532.5, p:3382.84},
+  {m:"Oct 2025",i:83, r:24598.28,xe:12215.85,xw:23803.05,lc:11587.2,p:795.23},
+  {m:"Nov 2025",i:48, r:33947.26,xe:13935.68,xw:25951.49,lc:12015.81,p:7995.77},
+  {m:"Dic 2025",i:62, r:22066.35,xe:12604.54,xw:20738.54,lc:8134,   p:1327.81},
+  {m:"Ene 2026",i:55, r:27854.13,xe:13303.39,xw:23909.69,lc:10606.3,p:3944.44},
+  {m:"Feb 2026",i:36, r:23160.03,xe:11609.39,xw:18881.89,lc:7272.5, p:4278.64}
+];
+var AL=[
+  {m:"Sep 2025",pif:1365,pye:1531,nS:101,nO:29,rC:80.08,rP:71.87,pN:43654, pR:206733},
+  {m:"Oct 2025",pif:1369,pye:1529,nS:174,nO:31,rC:80.70,rP:71.84,pN:76421, pR:259192},
+  {m:"Nov 2025",pif:1363,pye:1529,nS:217,nO:32,rC:80.45,rP:71.92,pN:36694, pR:204373},
+  {m:"Dic 2025",pif:1372,pye:1526,nS:274,nO:34,rC:81.94,rP:72.84,pN:57993, pR:216345}
+];
+var GD=[
+  {m:"Mar 2024",r:30072.82,p:9814.51, g:1226.81,k:null, tr:"125",cap:120000},
+  {m:"Abr 2024",r:28201.33,p:7997.64, g:1000.00,k:null, tr:"125",cap:120000},
+  {m:"May 2024",r:31331.16,p:10770.21,g:1346.27,k:null, tr:"125",cap:120000},
+  {m:"Jun 2024",r:26320.51,p:9265.32, g:1111.71,k:null, tr:"125",cap:120000},
+  {m:"Jul 2024",r:25039.55,p:7789.33, g:1000.00,k:null, tr:"125",cap:120000},
+  {m:"Ago 2024",r:28277.25,p:11883.92,g:1485.49,k:null, tr:"125",cap:120000},
+  {m:"Sep 2024",r:26264.36,p:13190.52,g:1648.81,k:null, tr:"125",cap:120000},
+  {m:"Oct 2024",r:21810.15,p:10517.74,g:1314.71,k:null, tr:"125",cap:120000},
+  {m:"Nov 2024",r:25278.09,p:15551.75,g:1943.96,k:null, tr:"125",cap:120000},
+  {m:"Dic 2024",r:20587.59,p:12212.41,g:1526.55,k:null, tr:"18", cap:165000},
+  {m:"Ene 2025",r:21283.64,p:10783.47,g:1941.02,k:null, tr:"18", cap:165000},
+  {m:"Feb 2025",r:25362.71,p:15574.23,g:2803.36,k:null, tr:"18", cap:165000},
+  {m:"Mar 2025",r:25167.48,p:16350.51,g:2943.09,k:null, tr:"18", cap:165000},
+  {m:"Abr 2025",r:22776.31,p:14050.74,g:2529.13,k:null, tr:"18", cap:165000},
+  {m:"May 2025",r:21485.78,p:12360.24,g:2224.84,k:null, tr:"18", cap:165000},
+  {m:"Jun 2025",r:19663.63,p:8335.15, g:1500.33,k:null, tr:"18", cap:170000},
+  {m:"Jul 2025",r:19429.73,p:5737.80, g:1032.80,k:null, tr:"18", cap:170000},
+  {m:"Ago 2025",r:18187.26,p:9091.53, g:1636.47,k:null, tr:"18", cap:170000},
+  {m:"Sep 2025",r:19472.12,p:3382.84, g:608.91, k:null, tr:"18", cap:170000},
+  {m:"Oct 2025",r:24598.28,p:795.23,  g:143.14, k:1000, tr:"18", cap:170000},
+  {m:"Nov 2025",r:33947.26,p:7995.77, g:1439.23,k:null, tr:"18", cap:170000},
+  {m:"Dic 2025",r:22066.35,p:1327.81, g:239.58, k:1000, tr:"18", cap:170000},
+  {m:"Ene 2026",r:27854.13,p:3944.44, g:710.00, k:null, tr:"18", cap:170000},
+  {m:"Feb 2026",r:23160.03,p:4278.64, g:932.74, k:null, tr:"2117",cap:200000}
+];
+var RATES={"125":0.125,"18":0.18,"2117":0.2117};
+var BCOL={"125":"#b8860b","18":"#2d6a2d","2117":"#2563a8"};
+var BGCOL={"125":"rgba(184,134,11,.52)","18":"rgba(45,106,45,.52)","2117":"rgba(37,99,168,.56)"};
+var TL={"125":"12.5%","18":"18%","2117":"21.17%"};
+var TN={"125":"Tramo 1 · 12.5% · $120,000 · Mar 2024","18":"Tramo 2 · 18% · $165K–170K · Dic 2024","2117":"Tramo 3 · 21.17% · $200,000 · Feb 2026"};
+var NI={"Sep 2025":46,"Oct 2025":83,"Nov 2025":48,"Dic 2025":62,"Ene 2026":55,"Feb 2026":36,"Mar 2026":260,"Abr 2026":280,"May 2026":290,"Jun 2026":300,"Jul 2026":260,"Ago 2026":270};
+var PM=["Mar 2026","Abr 2026","May 2026","Jun 2026","Jul 2026","Ago 2026"];
+var OM=["Sep 2025","Oct 2025","Nov 2025","Dic 2025","Ene 2026","Feb 2026"];
+</script>
+
+<script>
+// ─────────────────────────────────────────────────────────────
+// HELPERS
+// ─────────────────────────────────────────────────────────────
+var gc="rgba(0,0,0,.05)",tc="#9a9a90";
+function fmtF(v){return "$"+v.toLocaleString("en-US",{minimumFractionDigits:2,maximumFractionDigits:2});}
+function fmtK(v){return "$"+Math.round(v).toLocaleString("en-US");}
+function bO(yCb){return {responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{ticks:{color:tc,font:{size:8},maxRotation:45,autoSkip:true,maxTicksLimit:13},grid:{color:gc}},y:{ticks:{color:tc,font:{size:8},callback:yCb||function(v){return v;}},grid:{color:gc}}}};}
+function mkKC(arr){return arr.map(function(k){return '<div class="kc '+k.a+'"><div class="kl">'+k.l+'</div><div class="kv '+k.c+'">'+k.v+'</div><div class="ks">'+k.s+'</div></div>';}).join("");}
+function mkIG(arr){return arr.map(function(i){return '<div class="ic"><div class="itag '+i.tag+'">'+i.lbl+'</div>'+(i.n?'<div class="inum" style="color:'+i.nc+'">'+i.n+'</div>':'')+'<div class="itit">'+i.t+'</div><div class="idsc">'+i.d+'</div></div>';}).join("");}
+</script>
+
+<script>
+// ─────────────────────────────────────────────────────────────
+// FEMAR — DOMContentLoaded (tab activa al cargar)
+// ─────────────────────────────────────────────────────────────
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementById("nmeta").textContent = "Actualizado: "+META.ultima_actualizacion+" · Último mes: "+META.ultimo_mes_cargado;
+  _done["femar"] = true;
+
+  var fms=FD.map(function(d){return d.m;}), ams=AL.map(function(d){return d.m;});
+  var avgI=FD.reduce(function(s,d){return s+d.i;},0)/FD.length;
+  var maxI=Math.max.apply(null,FD.map(function(d){return d.i;}));
+  var maxIM=FD[FD.map(function(d){return d.i;}).indexOf(maxI)].m;
+  var avgR=FD.reduce(function(s,d){return s+d.r;},0)/FD.length;
+  var avgER=FD.reduce(function(s,d){return s+(d.xe/d.r);},0)/FD.length*100;
+  var validFD=FD.filter(function(d){return d.i>0;});
+  var avgCPI=validFD.reduce(function(s,d){return s+d.lc/d.i;},0)/validFD.length;
+  document.getElementById("f-kpis").innerHTML=mkKC([
+    {l:"Avg items/mes",v:avgI.toFixed(1),s:"meta: 40",a:"ab",c:"b"},
+    {l:"Mejor mes",v:maxI+" items",s:maxIM,a:"ag",c:"g"},
+    {l:"Avg revenue/mes",v:"$"+Math.round(avgR/1000)+"k",s:"24 meses",a:"ab",c:"b"},
+    {l:"Revenue acumulado",v:"$"+Math.round(FD.reduce(function(s,d){return s+d.r;},0)/1000)+"K",s:"total",a:"ab",c:"b"},
+    {l:"Avg exp. ratio",v:avgER.toFixed(1)+"%",s:"costos fijos/rev",a:avgER>55?"ar":"ag",c:avgER>55?"r":"g"},
+    {l:"Avg costo/item",v:fmtK(avgCPI),s:"lead cost÷items",a:"aa",c:"a"}
+  ]);
+
+  new Chart(document.getElementById("f-c1"),{type:"bar",data:{labels:fms,datasets:[{data:FD.map(function(d){return d.i;}),backgroundColor:FD.map(function(d){return d.i>=40?"rgba(45,106,45,.65)":"rgba(37,99,168,.45)";}),borderColor:FD.map(function(d){return d.i>=40?"#2d6a2d":"#2563a8";}),borderWidth:1.5,borderRadius:3},{type:"line",data:Array(FD.length).fill(40),borderColor:"#d44",borderDash:[4,3],borderWidth:1.5,pointRadius:0}]},options:bO()});
+  new Chart(document.getElementById("f-c2"),{type:"line",data:{labels:fms,datasets:[{data:FD.map(function(d){return d.r;}),borderColor:"#2563a8",borderWidth:2,pointRadius:2,tension:.3,fill:false},{data:FD.map(function(d){return d.xw;}),borderColor:"#d44",borderWidth:2,pointRadius:2,tension:.3,fill:false}]},options:bO(function(v){return "$"+(v/1000).toFixed(0)+"k";})});
+  new Chart(document.getElementById("f-c3"),{type:"line",data:{labels:fms,datasets:[{data:FD.map(function(d){return d.i>0?Math.round(d.lc/d.i):null;}),borderColor:"#d4840a",backgroundColor:"rgba(212,132,10,.06)",borderWidth:2,pointRadius:2,tension:.3,fill:true}]},options:bO(function(v){return "$"+v;})});
+  new Chart(document.getElementById("f-c4"),{type:"line",data:{labels:fms,datasets:[{data:FD.map(function(d){return parseFloat((d.xe/d.r*100).toFixed(1));}),borderColor:"#7c3aed",backgroundColor:"rgba(124,58,237,.05)",borderWidth:2,pointRadius:3,pointBackgroundColor:FD.map(function(d){return d.xe/d.r>.6?"#d44":"#7c3aed";}),tension:.3,fill:true}]},options:bO(function(v){return v+"%";})});
+  new Chart(document.getElementById("f-c5"),{type:"line",data:{labels:fms,datasets:[{data:FD.map(function(d){return parseFloat((d.lc/d.r*100).toFixed(1));}),borderColor:"#d4840a",backgroundColor:"rgba(212,132,10,.06)",borderWidth:2,pointRadius:2,tension:.3,fill:true}]},options:bO(function(v){return v+"%";})});
+  new Chart(document.getElementById("f-c6"),{type:"line",data:{labels:ams,datasets:[{data:AL.map(function(d){return d.pif;}),borderColor:"#2563a8",backgroundColor:"rgba(37,99,168,.07)",borderWidth:2,pointRadius:5,tension:.2,fill:true},{data:AL.map(function(d){return d.pye;}),borderColor:"#d44",borderDash:[4,3],borderWidth:1.5,pointRadius:0}]},options:Object.assign(bO(),{scales:{x:{ticks:{color:tc,font:{size:10}},grid:{color:gc}},y:{min:1300,ticks:{color:tc,font:{size:9}},grid:{color:gc}}}})});
+  new Chart(document.getElementById("f-c7"),{type:"bar",data:{labels:ams,datasets:[{data:AL.map(function(d){return d.rC;}),backgroundColor:"rgba(29,158,117,.55)",borderColor:"#1D9E75",borderWidth:1.5,borderRadius:3},{data:AL.map(function(d){return d.rP;}),backgroundColor:"rgba(180,178,169,.4)",borderColor:"#b4b2a9",borderWidth:1.5,borderRadius:3}]},options:Object.assign(bO(function(v){return v+"%";}),{scales:{x:{ticks:{color:tc,font:{size:10}},grid:{color:gc}},y:{min:65,max:88,ticks:{color:tc,font:{size:9},callback:function(v){return v+"%";}},grid:{color:gc}}}})});
+  new Chart(document.getElementById("f-c8"),{type:"bar",data:{labels:ams,datasets:[{data:AL.map(function(d){return d.nS;}),backgroundColor:"rgba(45,106,45,.6)",borderColor:"#2d6a2d",borderWidth:1.5,borderRadius:3,stack:"s"},{data:AL.map(function(d){return d.nO;}),backgroundColor:"rgba(212,132,10,.5)",borderColor:"#d4840a",borderWidth:1.5,borderSkipped:"bottom",stack:"s"}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{stacked:true,ticks:{color:tc,font:{size:10}},grid:{color:gc}},y:{stacked:true,ticks:{color:tc,font:{size:9}},grid:{color:gc}}}}});
+  new Chart(document.getElementById("f-c9"),{type:"bar",data:{labels:ams,datasets:[{data:AL.map(function(d){return d.pN;}),backgroundColor:"rgba(124,58,237,.5)",borderColor:"#7c3aed",borderWidth:1.5,borderRadius:3,stack:"p"},{data:AL.map(function(d){return d.pR;}),backgroundColor:"rgba(37,99,168,.45)",borderColor:"#2563a8",borderWidth:1.5,borderSkipped:"bottom",stack:"p"}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{x:{stacked:true,ticks:{color:tc,font:{size:10}},grid:{color:gc}},y:{stacked:true,ticks:{color:tc,font:{size:9},callback:function(v){return "$"+(v/1000).toFixed(0)+"k";}},grid:{color:gc}}}}});
+
+  var ftb=document.getElementById("f-tb");
+  FD.forEach(function(d){
+    var er=(d.xe/d.r*100).toFixed(1),lp=(d.lc/d.r*100).toFixed(1);
+    var tr=document.createElement("tr");
+    tr.innerHTML="<td>"+d.m+"</td><td class='"+(d.i>=40?"tg":"")+"'>"+d.i+"</td><td>"+fmtK(d.r)+"</td><td>"+fmtK(d.xw)+"</td><td>"+fmtK(d.lc)+"</td><td class='"+(parseFloat(lp)>40?"ta2":"")+"'>"+lp+"%</td><td class='"+(d.p>10000?"tg":d.p<3000?"tr2":"")+"'>"+fmtK(d.p)+"</td><td class='"+(parseFloat(er)>60?"tr2":parseFloat(er)<35?"tg":"")+"'>"+er+"%</td>";
+    ftb.appendChild(tr);
+  });
+});
+</script>
+
+<script>
+// ─────────────────────────────────────────────────────────────
+// GLOUP — lazy, se llama al hacer click en el tab
+// ─────────────────────────────────────────────────────────────
+function initGloup() {
+  var gms=GD.map(function(d){return d.m;});
+  var T1=GD.filter(function(d){return d.tr==="125";}), T2=GD.filter(function(d){return d.tr==="18";}), T3=GD.filter(function(d){return d.tr==="2117";});
+  var roi1=T1.reduce(function(s,d){return s+d.g;},0), roi2=T2.reduce(function(s,d){return s+d.g;},0), roi3=T3.reduce(function(s,d){return s+d.g;},0);
+  var rp1=roi1/120000*100, rp2=roi2/167500*100, rp3=roi3/200000*100;
+  var ra1=(Math.pow(1+roi1/120000,12/T1.length)-1)*100, ra2=(Math.pow(1+roi2/167500,12/T2.length)-1)*100;
+  var totalG=GD.reduce(function(s,d){return s+d.g;},0);
+  var roiTP=totalG/200000*100, roiTA=(Math.pow(1+totalG/200000,12/24)-1)*100;
+  var bestG=GD.reduce(function(b,d){return d.g>b.g?d:b;},GD[0]);
+  var worstG=GD.reduce(function(b,d){return d.g<b.g?d:b;},GD[0]);
+
+  document.getElementById("g-tl").innerHTML=[
+    {d:"Mar 2024",e:"Inversión inicial",c:"$120,000",tr:"125",roi:rp1,ann:ra1},
+    {d:"Dic 2024",e:"Segunda ronda +$45K",c:"$165,000",tr:"18",roi:null},
+    {d:"Jun 2025",e:"Tramos adicionales +$5K",c:"$170,000",tr:"18",roi:rp2,ann:ra2},
+    {d:"Feb 2026",e:"Tramo adicional +$30K",c:"$200,000",tr:"2117",roi:rp3,ann:null}
+  ].map(function(t,i){
+    return '<div class="tli"><div class="tli-d">'+t.d+'</div><div class="tli-e">'+t.e+'</div><div class="tli-c" style="color:'+BCOL[t.tr]+'">'+t.c+'</div><div class="tli-p p'+t.tr+'">'+TL[t.tr]+'</div>'+(t.roi!=null?'<div class="tli-roi">ROI: <span class="tli-roiv" style="color:'+BCOL[t.tr]+'">'+t.roi.toFixed(2)+'%</span></div><div class="tli-roi">Anualizado: <span class="tli-roiv">'+(t.ann!=null?t.ann.toFixed(2)+"%":"1 mes")+'</span></div>':'<div class="tli-roi" style="color:var(--t3)">continúa en T2</div>')+(i<3?'<div class="tl-arr">›</div>':'')+'</div>';
+  }).join("");
+
+  document.getElementById("g-rc").innerHTML=[
+    {cls:"t1",p:"Mar–Nov 2024 · 9 meses",t:"Tramo 1 · $120,000 · 12.5%",cap:120000,profit:roi1,rp:rp1,ann:ra1,note:"Capital inicial."},
+    {cls:"t2",p:"Dic 2024–Ene 2026 · 14 meses",t:"Tramo 2 · $165K–170K · 18%",cap:167500,profit:roi2,rp:rp2,ann:ra2,note:"Capital promedio $167.5K."},
+    {cls:"t3",p:"Feb 2026 · 1 mes",t:"Tramo 3 · $200,000 · 21.17%",cap:200000,profit:roi3,rp:rp3,ann:null,note:"Solo 1 mes disponible."}
+  ].map(function(r){
+    return '<div class="rc '+r.cls+'"><div class="rc-p">'+r.p+'</div><div class="rc-t">'+r.t+'</div><div class="rc-r"><span class="rc-rl">Capital invertido</span><span class="rc-rv">'+fmtK(r.cap)+'</span></div><div class="rc-r"><span class="rc-rl">Profit Gloup período</span><span class="rc-rv" style="color:#2d6a2d">'+fmtF(r.profit)+'</span></div><div class="rc-b" style="color:'+(r.cls==="t1"?"#b8860b":r.cls==="t2"?"#2d6a2d":"#2563a8")+'">'+r.rp.toFixed(2)+'%</div><div class="rc-a">ROI período'+(r.ann!=null?" · "+r.ann.toFixed(2)+"% anualizado":"")+'</div><div class="rc-n">'+r.note+'</div></div>';
+  }).join("");
+
+  document.getElementById("g-kpis").innerHTML=mkKC([
+    {l:"Inversión total",v:"$200,000",s:"3 tramos · Mar 2024–Feb 2026",a:"ab",c:"b"},
+    {l:"Participación actual",v:"21.17%",s:"desde Feb 2026",a:"ab",c:"b"},
+    {l:"Profit acumulado",v:fmtK(totalG),s:"24 meses",a:"ag",c:"g"},
+    {l:"ROI total",v:roiTP.toFixed(2)+"%",s:"sobre $200K",a:roiTP>10?"ag":"aa",c:roiTP>10?"g":"a"},
+    {l:"ROI anualizado",v:roiTA.toFixed(2)+"%",s:"tasa anual equiv.",a:roiTA>6?"ag":"aa",c:roiTA>6?"g":"a"},
+    {l:"Mejor mes",v:fmtK(bestG.g),s:bestG.m,a:"ag",c:"g"},
+    {l:"Peor mes",v:fmtK(worstG.g),s:worstG.m,a:"ar",c:"r"},
+    {l:"Commitments",v:"2 meses",s:"Oct + Dic 2025",a:"ar",c:"r"}
+  ]);
+
+  new Chart(document.getElementById("g-c1"),{type:"bar",data:{labels:gms,datasets:[
+    {data:GD.map(function(d){return parseFloat(d.g.toFixed(2));}),backgroundColor:GD.map(function(d){return d.k?BGCOL[d.tr].replace(".52",".75").replace(".56",".75"):BGCOL[d.tr];}),borderColor:GD.map(function(d){return BCOL[d.tr];}),borderWidth:1.5,borderRadius:0,borderSkipped:"bottom",stack:"s"},
+    {data:GD.map(function(d){return d.k?parseFloat((d.k-d.g).toFixed(2)):0;}),backgroundColor:"rgba(212,68,68,.55)",borderColor:"#d44",borderWidth:1.5,borderRadius:4,borderSkipped:"bottom",stack:"s"}
+  ]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{stacked:true,ticks:{color:tc,font:{size:8},maxRotation:45,autoSkip:true,maxTicksLimit:14},grid:{color:gc}},y:{stacked:true,ticks:{color:tc,font:{size:8},callback:function(v){return "$"+(v>=1000?(v/1000).toFixed(1)+"k":v);}},grid:{color:gc}}},plugins:{legend:{display:false}}}});
+
+  var ac1=0,ac2=0,ac3=0,r1A=[],r2A=[],r3A=[];
+  GD.forEach(function(d){
+    if(d.tr==="125"){ac1+=d.g;r1A.push(parseFloat((ac1/120000*100).toFixed(3)));r2A.push(null);r3A.push(null);}
+    else if(d.tr==="18"){ac2+=d.g;r1A.push(null);r2A.push(parseFloat((ac2/167500*100).toFixed(3)));r3A.push(null);}
+    else{ac3+=d.g;r1A.push(null);r2A.push(null);r3A.push(parseFloat((ac3/200000*100).toFixed(3)));}
+  });
+  new Chart(document.getElementById("g-c2"),{type:"line",data:{labels:gms,datasets:[
+    {data:r1A,borderColor:"#b8860b",borderWidth:2,pointRadius:3,pointBackgroundColor:"#b8860b",tension:.3,fill:false,spanGaps:false},
+    {data:r2A,borderColor:"#2d6a2d",borderWidth:2,pointRadius:3,pointBackgroundColor:"#2d6a2d",tension:.3,fill:false,spanGaps:false},
+    {data:r3A,borderColor:"#2563a8",borderWidth:2,pointRadius:5,pointBackgroundColor:"#2563a8",tension:.3,fill:false,spanGaps:false}
+  ]},options:bO(function(v){return v.toFixed(1)+"%";})});
+
+  var gac=0, gacD=GD.map(function(d){gac+=d.g;return Math.round(gac);});
+  new Chart(document.getElementById("g-c3"),{type:"line",data:{labels:gms,datasets:[
+    {data:gacD,borderColor:"#2563a8",backgroundColor:"rgba(37,99,168,.07)",borderWidth:2,pointRadius:2,tension:.3,fill:true},
+    {data:Array(GD.length).fill(200000),borderColor:"#d44",borderDash:[4,3],borderWidth:1.5,pointRadius:0}
+  ]},options:bO(function(v){return "$"+(v/1000).toFixed(0)+"k";})});
+  new Chart(document.getElementById("g-c4"),{type:"bar",data:{labels:gms,datasets:[
+    {data:GD.map(function(d){return d.p;}),backgroundColor:"rgba(212,132,10,.35)",borderColor:"#d4840a",borderWidth:1.5,borderRadius:3},
+    {data:GD.map(function(d){return d.g;}),backgroundColor:GD.map(function(d){return BGCOL[d.tr];}),borderColor:GD.map(function(d){return BCOL[d.tr];}),borderWidth:1.5,borderRadius:3}
+  ]},options:bO(function(v){return "$"+(v/1000).toFixed(0)+"k";})});
+
+  var gtb=document.getElementById("g-tb"), prevTr=null;
+  GD.forEach(function(d){
+    if(d.tr!==prevTr){var sep=document.createElement("tr");sep.className="sep";sep.innerHTML="<td colspan='9'>"+TN[d.tr]+"</td>";gtb.appendChild(sep);prevTr=d.tr;}
+    var esp=d.p*RATES[d.tr], delta=d.g-esp, rM=(d.g/d.cap*100).toFixed(3);
+    var tr=document.createElement("tr");
+    tr.innerHTML="<td>"+d.m+"</td><td>"+fmtK(d.r)+"</td><td class='ta2'>"+fmtK(d.p)+"</td><td style='text-align:right'>"+fmtK(d.cap)+"</td><td><span style='font-size:9px;font-family:monospace;padding:1px 6px;border-radius:3px;font-weight:700' class='p"+d.tr+"'>"+TL[d.tr]+"</span></td><td class='tg'>"+fmtF(d.g)+"</td><td style='color:"+BCOL[d.tr]+";font-weight:600'>"+rM+"%</td><td>"+(d.k?"<span class='bc'>↑ "+fmtF(d.k)+"</span>":"—")+"</td><td class='"+(Math.abs(delta)>5?delta>0?"tg":"tr2":"")+"'>"+(delta>=0?"+":"")+fmtF(delta)+"</td>";
+    gtb.appendChild(tr);
+  });
+
+  document.getElementById("g-ins").innerHTML=mkIG([
+    {tag:"ti",lbl:"Info",t:"Equity — el ROI es el flujo mensual perpetuo",n:roiTP.toFixed(1)+"% total · "+roiTA.toFixed(1)+"% anualizado",nc:"#2563a8",d:"Sobre $200K, el profit de $"+Math.round(totalG).toLocaleString()+" en 24 meses representa el "+roiTP.toFixed(1)+"% ("+roiTA.toFixed(1)+"% anualizado). El capital no se devuelve."},
+    {tag:"tww",lbl:"T1 ROI",t:"T1 (12.5%) tuvo el mayor ROI: "+rp1.toFixed(2)+"%",n:ra1.toFixed(1)+"% anualizado",nc:"#b8860b",d:"Sobre $120K, Gloup recibió $"+Math.round(roi1).toLocaleString()+" en 9 meses. El mejor ROI porque el capital era menor y la estructura más liviana."},
+    {tag:"tok",lbl:"Ok",t:"Pro Status Abr 2026 — piso estructural más alto",n:"~$17.3K/mes base renewals",nc:"#2d6a2d",d:"Con 8% sobre $216K de renewal mensual y 21.17% del profit neto, el retorno proyectado en Q2 2026 supera cualquier mes histórico."},
+    {tag:"tpp",lbl:"Proyección",t:"Q2 2026 — los 762 items de Q4 2025 vencen y se renuevan",n:null,nc:null,d:"Mar–Jun 2026 concentra los vencimientos del período de mayor inversión. Con 21.17%, el Gloup Profit de esos meses debería ser el más alto registrado."}
+  ]);
+}
+</script>
+
+<script>
+// ─────────────────────────────────────────────────────────────
+// PROYECCIÓN — lazy, se llama al hacer click en el tab
+// ─────────────────────────────────────────────────────────────
+function initProj() {
+  var RET=0.8194, PREM=148, COMM=0.08, GSHARE=0.2117;
+  var pF=2167, pFD=[];
+  var PD=PM.map(function(m,i){
+    var or=OM[i], v=NI[or]||0, r=Math.round(v*RET), ch=v-r;
+    var pr=Math.round(r*PREM*6), co=Math.round(pr*COMM), gl=Math.round(co*GSHARE);
+    pF=pF-ch+(NI[m]||271); pFD.push(pF);
+    return {m:m,or:or,v:v,r:r,ch:ch,pr:pr,co:co,gl:gl};
+  });
+  var totalCo=PD.reduce(function(s,d){return s+d.co;},0);
+  var totalGl=PD.reduce(function(s,d){return s+d.gl;},0);
+  var totalCh=PD.reduce(function(s,d){return s+d.ch;},0);
+  var totalV=PD.reduce(function(s,d){return s+d.v;},0);
+  var totalR=PD.reduce(function(s,d){return s+d.r;},0);
+  var peak=PD.reduce(function(b,d){return d.co>b.co?d:b;},PD[0]);
+  var peakGl=PD.reduce(function(b,d){return d.gl>b.gl?d:b;},PD[0]);
+  var glRoi=(totalGl/200000*100).toFixed(2);
+  var cruceI=pFD.findIndex(function(f){return f>=2362;});
+  var cruceMes=cruceI>=0?PM[cruceI]:"post Ago 2026";
+
+  document.getElementById("p-kpis").innerHTML=mkKC([
+    {l:"Items vencen Mar–Ago",v:totalV.toLocaleString(),s:"Q4 2025 + Ene/Feb 2026",a:"ab",c:"b"},
+    {l:"Renuevan (81.94%)",v:totalR.toLocaleString(),s:"items proyectados",a:"ag",c:"g"},
+    {l:"Comisión renewal 6M",v:fmtK(totalCo),s:"8% Pro Status",a:"ag",c:"g"},
+    {l:"Pico: "+peak.m,v:fmtK(peak.co),s:"comisión más alta",a:"ap",c:"p"},
+    {l:"Gloup 6M (21.17%)",v:fmtK(totalGl),s:"sobre profit renewals",a:"ag",c:"g"},
+    {l:"Churn semestre",v:totalCh+" items",s:"a retener",a:"ar",c:"r"}
+  ]);
+
+  new Chart(document.getElementById("p-c1"),{type:"bar",data:{labels:PM,datasets:[{data:PD.map(function(d){return d.v;}),backgroundColor:"rgba(212,68,68,.35)",borderColor:"#d44",borderWidth:1.5,borderRadius:3},{data:PD.map(function(d){return d.r;}),backgroundColor:"rgba(29,158,117,.55)",borderColor:"#1D9E75",borderWidth:1.5,borderRadius:3}]},options:bO()});
+  new Chart(document.getElementById("p-c2"),{type:"bar",data:{labels:PM,datasets:[{data:PD.map(function(d){return d.co;}),backgroundColor:PD.map(function(d){return d===peak?"rgba(124,58,237,.8)":"rgba(124,58,237,.45)";}),borderColor:"#7c3aed",borderWidth:1.5,borderRadius:4}]},options:bO(function(v){return "$"+(v/1000).toFixed(1)+"k";})});
+
+  var hFM=["Sep 2025","Oct 2025","Nov 2025","Dic 2025"], hFF=[2079,2127,2139,2167], allFM=hFM.concat(PM);
+  new Chart(document.getElementById("p-c3"),{type:"line",data:{labels:allFM,datasets:[
+    {data:hFF.concat(Array(6).fill(null)),borderColor:"#2563a8",backgroundColor:"rgba(37,99,168,.07)",borderWidth:2,pointRadius:4,tension:.2,fill:true},
+    {data:Array(4).fill(null).concat(pFD),borderColor:"#7c3aed",backgroundColor:"rgba(124,58,237,.04)",borderWidth:2,pointRadius:4,tension:.2,fill:false},
+    {data:Array(allFM.length).fill(2362),borderColor:"#d44",borderDash:[4,3],borderWidth:1.5,pointRadius:0}
+  ]},options:Object.assign(bO(),{scales:{x:{ticks:{color:tc,font:{size:8},maxRotation:45},grid:{color:gc}},y:{min:2000,ticks:{color:tc,font:{size:9}},grid:{color:gc}}}})});
+  new Chart(document.getElementById("p-c4"),{type:"bar",data:{labels:PM,datasets:[{data:PD.map(function(d){return d.gl;}),backgroundColor:PD.map(function(d){return d===peakGl?"rgba(45,106,45,.75)":"rgba(45,106,45,.5)";}),borderColor:"#2d6a2d",borderWidth:1.5,borderRadius:4}]},options:bO(function(v){return "$"+v.toLocaleString();})});
+
+  var ptb=document.getElementById("p-tb");
+  PD.forEach(function(d){
+    var tr=document.createElement("tr"); tr.className="rrow";
+    tr.innerHTML="<td>"+d.m+" <span class='bproj'>proyección</span></td><td>"+(NI[d.m]||271).toLocaleString()+"</td><td style='color:#d44;font-weight:700'>"+d.v.toLocaleString()+"</td><td style='color:#2d6a2d;font-weight:700'>"+d.r.toLocaleString()+"</td><td style='color:#d44'>"+d.ch.toLocaleString()+"</td><td>"+fmtK(d.pr)+"</td><td style='color:#7c3aed;font-weight:700'>"+fmtK(d.co)+"</td><td style='color:#2d6a2d;font-weight:700'>"+fmtK(d.gl)+"</td><td style='font-size:9px;color:#9a9a90'>"+d.or+"</td>";
+    ptb.appendChild(tr);
+  });
+
+  document.getElementById("p-ins").innerHTML=mkIG([
+    {tag:"tpp",lbl:"Pico",t:"Pico Jun 2026 — comisión más alta del semestre",n:fmtK(peak.co)+" comisión · "+fmtK(peakGl.gl)+" para Gloup",nc:"#7c3aed",d:"Los 62 new items escritos en Dic 2025 vencen en Jun 2026. Con 81.94% de retención la comisión renewal es "+fmtK(peak.co)+", Gloup recibe "+fmtK(peak.gl)+"."},
+    {tag:"tok",lbl:"Ok",t:"Gloup semestral "+fmtK(totalGl)+" (+18% vs estimación al 18%)",n:fmtK(totalGl)+" en Mar–Ago 2026",nc:"#2d6a2d",d:"Con 21.17% vs 18% anterior el Gloup sube de ~$"+Math.round(totalCo*0.18).toLocaleString()+" a "+fmtK(totalGl)+" — diferencia de +$"+Math.round(totalGl-totalCo*0.18).toLocaleString()+" en el semestre."},
+    {tag:"ti",lbl:"Info",t:"ROI semestral proyectado sobre $200K: "+glRoi+"%",n:glRoi+"% sobre capital total",nc:"#2563a8",d:"Solo el componente renewal de Gloup en 6 meses representa el "+glRoi+"% del capital total. Sin contar el new business del período."},
+    {tag:"tww",lbl:"Atención",t:"Cada punto de retención vale ~$1.4K · "+totalCh+" items en riesgo",n:null,nc:null,d:"Con "+totalCh+" items que pueden no renovar, el seguimiento activo tiene ROI directo sobre el check mensual y sobre el profit del que Gloup recibe 21.17%."}
+  ]);
+
+  document.getElementById("p-recs").innerHTML=[
+    {titulo:"Seguimiento activo de renewals en Q2 2026",ctx:"762 items vencen Mar–Jun. Cada punto de retención vale ~$1,400/año de premium.",accion:"Contacto proactivo 30 días antes del vencimiento. Priorizar items de mayor prima.",estado:"pendiente"},
+    {titulo:"Monitorear cruce del PYE (2,362 items)",ctx:"Gap era -187 en Dic 2025. Proyección indica cruce en "+cruceMes+".",accion:"Confirmar con Federico qué beneficios activa Allstate al superar el PYE.",estado:"seguimiento"},
+    {titulo:"Solicitar Business Metrics mensual",ctx:"Solo 4 snapshots oficiales Sep–Dic 2025. El reporte de Allstate es mensual.",accion:"Pedir a Federico que reenvíe el xlsx de BM junto con el reporte financiero mensual.",estado:"pendiente"},
+    {titulo:"Revisar base de cálculo Gloup en meses de alta inversión",ctx:"Oct 2025: $11,587 en leads → profit $795 → Gloup $143.",accion:"Analizar si el contrato debería contemplar base mínima en meses de inversión intensa.",estado:"pendiente"},
+    {titulo:"Validar premium promedio por item",ctx:"Modelo usa $148/mes/item (Dic 2025). Si varía, el Gloup proyectado cambia.",accion:"Solicitar a Federico breakdown de premium promedio por línea.",estado:"pendiente"},
+    {titulo:"Evaluar diversificación hacia Property Lines",ctx:"Homeowners: 0% loss ratio y alta retención vs 47% de Standard Auto.",accion:"Evaluar cross-sell hacia Homeowners/Renters para mejorar loss ratio y bonus.",estado:"pendiente"},
+    {titulo:"Concentrar inversión en leads en Jul–Ago",ctx:"Jul–Ago vencen en Ene–Feb (los checks más altos del año).",accion:"Planificar pico de inversión en leads para verano 2026 mirando retorno en Q1 2027.",estado:"pendiente"}
+  ].map(function(r){
+    return '<div class="rec '+r.estado+'"><div class="rec-h"><div class="rec-t">'+r.titulo+'</div><span class="rec-b '+r.estado+'">'+r.estado.charAt(0).toUpperCase()+r.estado.slice(1)+'</span></div><div class="rec-c">'+r.ctx+'</div><div class="rec-a">→ '+r.accion+'</div></div>';
+  }).join("");
+}
+</script>
+
+
+</body></html>
